@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.views import generic
 
+from dashboard.apps.core import views
 from dashboard.apps.core.utils import log
 
 
-class IndexView(generic.ListView):
+class IndexView(views.IndexView):
     """
     IndexView:
     """
-    module = 'indexView'
+    module = 'IndexView'
     template_name = 'frontend/index.html'
 
     data = [
