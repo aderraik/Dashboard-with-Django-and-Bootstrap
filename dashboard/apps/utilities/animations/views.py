@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.views import generic
 
+import dashboard.apps.core.views as CoreView
 from dashboard.apps.core.utils import log
 
 
-class IndexView(generic.ListView):
+class IndexView(CoreView.IndexView):
     """
     IndexView:
     """

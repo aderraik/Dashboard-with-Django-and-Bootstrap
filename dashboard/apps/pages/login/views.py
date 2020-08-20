@@ -11,10 +11,7 @@ class IndexView(generic.ListView):
     module = 'IndexView'
     template_name = 'login/base.html'
 
-    data = [
-        ['#', 'Header', 'Header', 'Header', 'Header'],
-        ['1,001', 'Lorem', 'ipsum', 'dolor', 'sit'],
-    ]
+    data = None
 
     def get_queryset(self):
         log(self.module, 'get_queryset', file=__file__)

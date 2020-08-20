@@ -4,7 +4,7 @@ from django.views import generic
 from dashboard.apps.core.utils import log
 
 
-class IndexView(generic.ListView):
+class IndexView(generic.TemplateView):
     """
     IndexView:
     """
@@ -23,7 +23,9 @@ class IndexView(generic.ListView):
 
         context['num_alerts'] = self.num_alerts
         context['num_messages'] = self.num_messages
+        context['user'] = {'login': 'Administrator'}
 
-        # log(self.module, 'get_context_data', 'context=%r' % context, file = __file__)
+        log(self.module, 'get_context_data', 'context=%r' %
+            context, file=__file__)
 
         return context
