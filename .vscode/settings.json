@@ -25,5 +25,6 @@
 		"**/templates/**/*.html": "django-html",
 		"**/requirements{/**,*}.{txt,in}": "pip-requirements"
 	},
-	"python.pythonPath": ".env/python/bin/python"
+	"python.pythonPath": "venv/bin/python",
+	"git.ignoreLimitWarning": true
 }

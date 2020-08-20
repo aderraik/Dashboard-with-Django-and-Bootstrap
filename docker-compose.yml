@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  web:
+    build: "./"
+    env_file:
+      - ".env"
+    ports:
+      - "${DOCKER_WEB_PORT:-8000}:8000"
+    volumes:
+      - "./:/app"
+    tty: true
