@@ -1,4 +1,4 @@
-{% extends 'site/base.html' %}
+{% extends 'site/base_full_page.html' %}
 {% load static %}
 
 {% block title %} Dashboard: with Django and Bootstrap {% endblock title %}
@@ -66,9 +66,6 @@
 							<hr />
 							<a href="{% url 'app:pages:index' %}" class="btn btn-google btn-user btn-block">
 								<i class="fab fa-google fa-fw"></i> Register with Google
-							</a>
-							<a href="{% url 'app:pages:index' %}" class="btn btn-facebook btn-user btn-block">
-								<i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
 							</a>
 						</form>
 						<hr />

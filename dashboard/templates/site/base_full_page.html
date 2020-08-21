@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>
+        {% block title %}Dashboard{% endblock title %}
+    </title>
+
+    {% include "site/base_header_styles.html" %}
+
+    {% block    additional_styles %}
+    {% endblock additional_styles %}
+</head>
+<body class="bg-gradient-primary">
+
+<div class="container">
+    <!-- Begin Page Content -->
+    {% block content %}MISSING CONTENT{% endblock content %}
+    <!-- /.container-fluid -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; 2020 | email@example.com</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+</div>
+
+	{% include "site/base_footer_scripts.html" %}
+
+	{% block    additional_scripts %}
+	{% endblock additional_scripts %}
+</body>
+</html>
