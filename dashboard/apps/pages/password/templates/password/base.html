@@ -1,6 +1,8 @@
 {% extends 'site/base_full_page.html' %}
 {% load static %}
 
+{% block title %} Recover password {% endblock title %}
+
 {% block content %}
 <div class="container">
 	<!-- Outer Row -->
@@ -30,7 +32,7 @@
 											placeholder="Enter Email Address..."
 										/>
 									</div>
-									<a href="{% url 'app:pages:login' %}" class="btn btn-primary btn-user btn-block">
+									<a href="{% url 'app:login' %}" class="btn btn-primary btn-user btn-block">
 										Reset Password
 									</a>
 								</form>

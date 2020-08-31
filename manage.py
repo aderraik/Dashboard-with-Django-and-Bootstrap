@@ -3,9 +3,20 @@
 import os
 import sys
 
+# Load the correct environment
+ENVIRONMENT = 'base'
+try:
+    from dashboard.settings.env import *
+except ImportError:
+    pass
+
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dashboard.settings')
+    config = 'dashboard.settings.' + ENVIRONMENT
+    os.environ['DJANGO_SETTINGS_MODULE'] = config
+    os.environ['DJANGO_CONFIGURATION'] = config
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', config)
+    # os.environ.setdefault('DJANGO_CONFIGURATION', config)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -1,7 +1,7 @@
 import random
 import string
 
-from dashboard.settings import APP_FLDR
+from dashboard.settings.base import APP_FLDR
 
 
 import logging

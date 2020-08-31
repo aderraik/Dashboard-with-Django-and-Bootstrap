@@ -1,11 +1,11 @@
 {% extends 'site/base_full_page.html' %}
 {% load static %}
 
-{% block title %} Dashboard: Login {% endblock title %}
+{% block title %} Login {% endblock title %}
 
 {% block content %}
 <!-- Begin Page Content -->
-	<!-- Outer Row -->
+<!-- Outer Row -->
 <div class="row justify-content-center">
 	<div class="col-xl-10 col-lg-12 col-md-9">
 		<div class="card o-hidden border-0 shadow-lg my-5">
@@ -46,7 +46,7 @@
 									Login
 								</a>
 								<hr />
-								<a href="{% url 'app:index' %}" class="btn btn-google btn-user btn-block">
+								<a href="{% url 'app:google' %}" class="btn btn-google btn-user btn-block">
 									<i class="fab fa-google fa-fw"></i> Login with Google
 								</a>
 							</form>

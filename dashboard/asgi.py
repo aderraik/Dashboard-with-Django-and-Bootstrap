@@ -11,6 +11,15 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dashboard.settings')
+# Load the correct environment
+ENVIRONMENT = 'base'
+try:
+    from dashboard.settings.env import *
+except ImportError:
+    pass
+
+config = 'dashboard.settings.' + ENVIRONMENT
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', config)
+os.environ.setdefault('DJANGO_CONFIGURATION', config)
 
 application = get_asgi_application()

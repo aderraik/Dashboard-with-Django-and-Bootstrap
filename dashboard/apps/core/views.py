@@ -10,6 +10,9 @@ class IndexView(generic.TemplateView):
     """
     module = 'IndexView'
 
+    title = 'Dashboard'
+    year = 2020
+    support_email = 'info@example.com'
     num_alerts = 2
     num_messages = 5
     user = None
@@ -26,6 +29,9 @@ class IndexView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
+        context['year'] = self.year
+        context['support_email'] = self.support_email
+        context['title'] = self.title
         context['num_alerts'] = self.num_alerts
         context['num_messages'] = self.num_messages
         context['user'] = {
@@ -33,7 +39,6 @@ class IndexView(generic.TemplateView):
             'login': self.user.name if self.user.is_authenticated else 'Need login',
         }
 
-        log(self.module, 'get_context_data', 'context=%r' %
-            context, file=__file__)
+        log(self.module, 'get_context_data', 'context=%r' % context, file=__file__)
 
         return context

@@ -10,7 +10,7 @@
     <meta name="author" content="" />
 
     <title>
-        {% block title %}Dashboard{% endblock title %}
+		{{ title }}: {% block title %}Dashboard{% endblock title %}
     </title>
 
     {% include "site/base_header_styles.html" %}
@@ -29,7 +29,7 @@
     <footer class="sticky-footer bg-white">
         <div class="container my-auto">
             <div class="copyright text-center my-auto">
-                <span>Copyright &copy; 2020 | email@example.com</span>
+				<span>Copyright &copy; {{ year }} | {{ support_email }}</span>
             </div>
         </div>
     </footer>

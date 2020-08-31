@@ -1,7 +1,7 @@
 {% extends 'site/base_full_page.html' %}
 {% load static %}
 
-{% block title %} Dashboard: with Django and Bootstrap {% endblock title %}
+{% block title %} Register {% endblock title %}
 
 {% block content %}
 <div class="container">
@@ -60,11 +60,11 @@
 									/>
 								</div>
 							</div>
-							<a href="{% url 'app:pages:login' %}" class="btn btn-primary btn-user btn-block">
+							<a href="{% url 'app:login' %}" class="btn btn-primary btn-user btn-block">
 								Register Account
 							</a>
 							<hr />
-							<a href="{% url 'app:pages:index' %}" class="btn btn-google btn-user btn-block">
+							<a href="{% url 'app:google' %}" class="btn btn-google btn-user btn-block">
 								<i class="fab fa-google fa-fw"></i> Register with Google
 							</a>
 						</form>
